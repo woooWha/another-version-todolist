@@ -1,24 +1,18 @@
 import React from 'react';
+import './TodoList.css';
 import TodoItem from './TodoItem';
-import "./TodoList.css";
 
-const TodoList = ({todos, onCheckToggle, onInsertToggle, onChangeSelectedTodo}) => {
+const TodoList = ({todos}) => {
     return (
         <div className="TodoList">
             {todos.map(todo => (
                 <TodoItem 
-                todo={todo} 
-                key={todo.id} 
-                onCheckToggle={onCheckToggle}
-                onInsertToggle={onInsertToggle}
-                onChangeSelectedTodo={onChangeSelectedTodo}
-                />
+                    todo={todo}
+                    key={todo.id}>
+                </TodoItem>
             ))}
         </div>
     )
 }
 
-
-  
-
-export default TodoList;
+export default TodoList

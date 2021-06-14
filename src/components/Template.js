@@ -1,12 +1,13 @@
 import React from 'react';
-import "./Template.css";
+import './Template.css';
 
-const Template = ({children, todoLength}) => {
+const Template = ({children, todosLength}) => {
     return (
-        <div className = "Template">
-            <div className="title">오늘의 할 일 ({todoLength})</div>
-            <div>{children}</div>
+        <div className="Template">
+            <h1 className="title">오늘의 할 일({todosLength})</h1>
+            {children}
         </div>
     )
 }
+
 export default Template;
